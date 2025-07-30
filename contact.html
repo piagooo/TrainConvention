@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Virtual Space</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+
+        h2{
+           font-size: 40px;
+           font-family: nunito;
+           font-weight: bold;
+           color:rgb(0,6,121);
+           margin-top: 10px;
+           margin-bottom: 10px;
+       
+        }
+        /* Contenedor principal */
+        .container-our {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Tarjeta del equipo */
+        .card-our {
+            background: linear-gradient(135deg, rgba(0, 6, 121, 1) 0%, rgba(0, 0, 50, 1) 100%); /* Degradado */
+            color: #fff;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* Invisible al inicio */
+            transform: translateY(30px); /* Desplazada hacia abajo */
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .card-our.show {
+            opacity: 1; /* Visible */
+            transform: translateY(0); /* Posición original */
+        }
+
+        .card-our:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Imagen circular */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff; /* Borde blanco */
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Información del miembro */
+        .info h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .info p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-family: nunito;
+        }
+
+        /* Botón de enlace */
+        .info a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #394CAA; /* Azul más claro */
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .info a:hover {
+            background-color: #2d3a89; /* Azul más oscuro */
+        }
+
+        .info a span {
+            font-size: 16px;
+            margin-left: 5px; /* Espacio entre texto e ícono */
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .card-our {
+                width: calc(50% - 20px); /* 2 columnas en pantallas medianas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-our {
+                width: 100%; /* Una columna en pantallas pequeñas */
+            }
+        }
+
+        @media (min-width: 769px){
+            footer{
+                position: absolute; bottom: 0;
+            }    
+        }
+    </style>
+    
+
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="Fotos/Logo/expo.svg" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="snactiv">HOME</a></li>
+                    <li><a href="history.html" class="snactiv">HISTORY OF SONORA</a></li>
+                    <li><a href="tourism.html" class="snactiv">TOURISM</a></li>
+                    <li><a href="links.html" class="snactiv">LINKS</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+ <div class="content-wrapper">
+     <!-- Sección Our Team -->
+     <h2 style="text-align:center;">Our Team</h2>
+
+     <div class="container-our">
+         <div class="card-our">
+             <div class="profile-image">
+                 <img src="Fotos/pfp.png" alt="DEFAULT PHOTO">
+             </div>
+             <div class="info">
+                 <h3>Juan Cabuto</h3>
+                 <p>Head Organizer</p>
+                 <a href="#" target="_blank">
+                     Find out more <span>&#10140;</span>
+                 </a>
+             </div>
+         </div>
+         <div class="card-our">
+             <div class="profile-image">
+                 <img src="Fotos/pfp.png" alt="default photo">
+             </div>
+             <div class="info">
+                 <h3>Bo Golson</h3>
+                 <p>Public Outreach</p>
+                 <a href="#" target="_blank">
+                     Find out more <span>&#10140;</span>
+                 </a>
+             </div>
+         </div>
+         <div class="card-our">
+             <div class="profile-image">
+                 <img src="Fotos/pfp.png" alt="default photo">
+             </div>
+             <div class="info">
+                 <h3>Jonathan Rodriguez</h3>
+                 <p>Head of Technology</p>
+                 <a href="#" target="_blank">
+                     Find out more <span>&#10140;</span>
+                 </a>
+             </div>
+         </div>
+ 
+       
+         <h2>For updates please follow our Facebook page!</h2>
+   
+ 
+         
+        
+         <!-- Repite más tarjetas -->
+     </div>
+ 
+     <!-- Animación de las tarjetas -->
+     <script>
+         window.addEventListener('load', () => {
+             const cards = document.querySelectorAll('.card-our');
+             cards.forEach((card, index) => {
+                 setTimeout(() => {
+                     card.classList.add('show');
+                 }, index * 200); // Retraso entre cada tarjeta
+             });
+         });
+     </script>
+</div>
+</body>
+
+<footer>
+    <h1>Social Networks</h1>
+    <div class="redes">
+        <!--insert social media link-->
+        <a href="https://www.linkedin.com/company/virtual-space-llc/"><img src="images/RS-02.png" alt=""></a>
+        <a href="https://www.facebook.com/VirtualSpaceLLC/"><img src="images/RS-03.png" alt=""></a>
+    </div>
+    <p>Virtual Space LLC All Rights Reserved © 2025 </p><br>
+</footer>
+
+
+
+    
+
+        
+
+</html>

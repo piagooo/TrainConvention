@@ -1,0 +1,8 @@
+.container__cover-home{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images/im@ges/Slideshow1Home/5.png);
+    background-size:cover;
+    min-height: 100vh;
+    min-width: 220px;
+}

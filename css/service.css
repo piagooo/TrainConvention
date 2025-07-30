@@ -1,0 +1,124 @@
+.container__cover-service{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(images/im@ges/rhinofinal.jpg);
+    background-size: cover;
+    min-height: 75vh;
+    min-width: 220px;
+}
+
+.tarjetas-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 90%; 
+  margin: 0 auto; 
+}
+
+
+.tarjeta {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor de la imagen */
+.tarjeta .image-container {
+  width: 100%;
+  height: 0;
+  padding-top: 100%; /* Esto mantiene la relación 1:1 de la imagen */
+  position: relative;
+  overflow: hidden;
+}
+
+
+.tarjeta img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+
+
+.tarjeta h3 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: ubuntu;
+  color: rgb(0, 6, 121);
+}
+
+
+.tarjeta p {
+  padding: 0 10px 10px;
+  text-align: center;
+  font-family: nunito;
+  color: #1d1d1d;
+  flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+}
+.servicedescription{
+  margin-top: 50px;
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+.servicedescription h3{
+  color: rgb(0, 6, 121) ;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: ubuntu;
+}
+.servicedescription p {
+  font-size: 18px;
+  text-align: center;
+  font-family: nunito;
+  color: #1d1d1d;
+
+}
+
+
+/* Media queries para hacer la página más responsiva */
+@media (max-width: 768px) {
+  .tarjetas-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%; /* En pantallas medianas, ocupa el 90% del ancho */
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjetas-container {
+    grid-template-columns: 1fr;
+    max-width: 95%; /* En pantallas pequeñas, ocupa el 95% del ancho */
+  }
+}
+
+/* Clase visible para activar la animación */
+.tarjeta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-wrapper {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

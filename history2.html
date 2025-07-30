@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Virtual Space</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vsa.css">
+
+    <!--slider links-->
+    <link rel="stylesheet" href="flexslider.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+    	pauseOnHover: false,
+    });
+  });
+</script>
+  <!--fin link slider-->
+  <!--Segundo slider link-->
+  <link rel="stylesheet" href="css/slider2.css">
+  <!--Final segundo slider-->
+  
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="images/LOGO-VS.png">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="snactiv">HOME</a> </li>
+                    <li><a href="service.html" class="snactiv">SERVICE</a> </li>
+                    <li><a href="vsone.html" class="snactiv">VSONE</a></li>
+                    <li><a href="vsa.html" class="snactiv">VSA</a></li>
+                    <li><a href="history.html" class="active">HISTORY</a></li>
+                    <li><a href="contact.html" class="snactiv">CONTACT</a></li>
+                    
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-right">
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+
+ <!--parte1-->     
+    
+ <footer>
+    <h1>Social Networks</h1>
+    <div class="redes">
+        <!--insert social media link-->
+        <a href="https://www.linkedin.com/company/virtual-space-llc/"><img src="images/RS-02.png" alt=""></a>
+        <a href="https://www.facebook.com/VirtualSpaceLLC/"><img src="images/RS-03.png" alt=""></a>
+    </div>
+    <p>Virtual Space LLC All Rights Reserved © 2025 </p><br>
+</footer>
+
+</body>
+</html>

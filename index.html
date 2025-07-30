@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Virtual Space</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<style>
+    h2{
+        text-align: center;
+    }
+
+</style>
+<body>
+
+  <!-- Pantalla de carga con el logo -->
+  <div id="loading-screen">
+    <img src="images/LOGO-VS.png" alt="Logo" id="logo"> <!-- Reemplaza con tu logo -->
+  </div>
+
+  <!-- Contenido de la página -->
+  <div id="content">
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="Fotos/Logo/expo.svg">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="history.html" class="snactiv">HISTORY OF SONORA</a></li>
+                    <li><a href="tourism.html" class="snactiv">TOURISM</a></li>
+                    <li><a href="links.html" class="snactiv">LINKS</a></li>
+                    <li><a href="contact.html" class="snactiv">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Video y contenido de la página -->
+    <video id="myVideo" class="video-fullwidth" muted loop controls>
+        <source src="" type="video/mp4">
+    </video>
+
+    <div class="description">
+        <h1>Welcome to the XXIX Convencion de FerroModelistas y Ferroaficionados de la Republica Mexicana - Hermosillo 2026</h1>
+        <p>Every year a convention is held in selected cities in the Mexican Republic and this year it is in Hermosillo, Sonora! You will have the opportunity to learn another side of Mexican History. Learn about the Impact that Railroads had in the state of Sonora! From the pioneering days of the Sonora Railway to the Sud Pacifico de Mexico to Ferrocarril Del Pacifico, Ferrocarril Sonora Baja California to Ferromex. Learn how mining and revolution shaped Sonora History </p>
+        <br>
+        <h2>Poster Submissions</h2>
+        <p>Do you have a passion for Railroads? Do you like Railroad History? Are you a Railfan? A Modeler?   Want to Participate? The Convention is looking for participants to submit posters to be presented in the exhibit hall! Please contact us to learn more to follow our guidelines</p>
+        <br>
+        <h2>Agenda</h2>
+        <h3>Thursday  6 of August  </h3>
+        <p>
+            Hotel Playa de Cortes
+            <br>
+            Luis Encinas S/N, Miramar, 85450 Guaymas, Son., Mexico
+            <br>
+            Museo Ferrocarrilero
+            <br>
+            C. Niños Heroes, Moderna, 85300 Empalme, Son., Mexico              
+        </p>
+        <br>
+        <h3>Friday 7 of August</h3>
+        <p>Presentations, Exhibit Hall</p>
+        <br>
+        <h3>Saturday 8 of August</h3>
+        <p>Museo del Ferrocarril. Benjamin Hill, Sonora </p>
+        <br>
+        <h3>Sunday 9 of August</h3>
+        <p>Closing Presentations</p>
+        <br>
+        <h2>Nearby Hotels</h2>
+        <p>
+            Hotel Araiza Hermosillo
+            Blvd. Fco. Eusebio Kino 353, Lomas Pitic, 83010 Hermosillo, Son., Mexico•+52 662 109 1700
+            <br>
+            <br>
+            Hotel Gandara
+            Blvd. Fco. Eusebio Kino 1000, Pitic, 83150 Hermosillo, Son., Mexico•+52 662 109 1200
+            <br>
+            <br>
+            Fiesta Americana Hermosillo
+            Blvd. Eusebio Kino No. 369 Col, Lomas Pitic, 83010 Hermosillo, Son., Mexico•+52 443 310 8137
+        </p>
+    </div>
+ 
+    <footer>
+        <h1>Social Networks</h1>
+        <div class="redes">
+            <!--insert social media link-->
+            <a href="https://www.linkedin.com/company/virtual-space-llc/"><img src="images/RS-02.png" alt=""></a>
+            <a href="https://www.facebook.com/VirtualSpaceLLC/"><img src="images/RS-03.png" alt=""></a>
+        </div>
+        <p>Virtual Space LLC All Rights Reserved © 2025 </p><br>
+    </footer>
+  </div>
+
+  <script>
+    // JavaScript para manejar la carga y desaparecer la pantalla de carga
+    window.addEventListener('load', () => {
+        // Espera 3 segundos antes de que el fondo y el logo empiecen a desvanecerse
+        setTimeout(() => {
+            // Elimina la pantalla de carga (hace que se desvanezca)
+            document.getElementById('loading-screen').classList.add('loaded');
+            
+            // Muestra el contenido de la página (desaparece el fondo y aparece el contenido)
+            document.getElementById('content').classList.add('loaded');
+        }, 3000); // 3 segundos antes de desvanecer la pantalla de carga
+
+        setTimeout(() =>{
+            document.getElementById('myVideo').play();
+        }, 3250);
+        
+    });
+
+    // Funcionalidad del menú hamburguesa
+    hamburger = document.querySelector(".hamburger");
+    nav = document.querySelector("nav");
+    hamburger.onclick = function() {
+        nav.classList.toggle("active");
+    }
+  </script>
+  <script src="video-controls.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Virtual Space</title>
+    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/service.css">
+   <link rel="icon" href="images/favicon.png" type="image/png">
+   <script src="image-expand.js"></script>
+
+  
+ 
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+              <img src="Fotos/Logo/expo.svg" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                  <li><a href="index.html" class="snactiv">HOME</a> </li>
+                  <li><a href="history.html" class="snactiv">HISTORY OF SONORA</a> </li>
+                  <li><a href="tourism.html" class="active">TOURISM</a> </li>
+                  <li><a href="links.html" class="snactiv">LINKS</a> </li>
+                  <li><a href="contact.html" class="snactiv">CONTACT</a></li>
+                    
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-right">
+
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+    </script>
+ 
+ <img src="Fotos/Tourism/san-carlos-4175388_1280.jpg">
+ <img src="Fotos/Tourism/unnamed.jpg">
+ <img src="Fotos/Tourism/Escudo_de_Hermosillo.svg.png">
+ <img src="Fotos/Tourism/quarry-6655939_1280.jpg">
+ <img src="Fotos/Tourism/hill-of-the-bell-7314174_1280.jpg">
+ <img src="Fotos/Tourism/20250627_125834.jpg">
+
+
+
+
+
+ <script>
+  // Seleccionamos todas las tarjetas
+const tarjetas = document.querySelectorAll('.tarjeta');
+
+// Creamos un observer para detectar cuando una tarjeta entra en el viewport
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Dejamos de observarla una vez se hizo visible
+    }
+  });
+}, { threshold: 0.5 }); // Solo activamos cuando el 50% de la tarjeta sea visible
+
+// Observamos todas las tarjetas
+tarjetas.forEach(tarjeta => {
+  observer.observe(tarjeta);
+});
+ </script>
+  
+  <!-- Footer -->
+
+        <footer>
+          <h1>Social Networks</h1>
+          <div class="redes">
+              <!--insert social media link-->
+              <a href="https://www.linkedin.com/company/virtual-space-llc/"><img src="images/RS-02.png" alt=""></a>
+              <a href="https://www.facebook.com/VirtualSpaceLLC/"><img src="images/RS-03.png" alt=""></a>
+          </div>
+          <p>Virtual Space LLC All Rights Reserved © 2025 </p><br>
+      </footer>
+
+
+</body>
+</html>

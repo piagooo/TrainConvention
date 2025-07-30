@@ -1,0 +1,118 @@
+/* Sección principal */
+.timeline-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.timeline-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #394CAA; /* Azul corporativo */
+}
+
+/* Línea de tiempo */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.timeline-content p{
+    font-family: nunito;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3dc5e7, #001f7f, #3dc5e7); /* Degradado */
+    background-size: 100% 300%; /* Tamaño del fondo más grande para el movimiento */
+    background-position: top; /* Inicia desde la parte superior */
+    animation: flow 3s infinite linear; /* Animación de flujo */
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 3px; /* Redondea la línea */
+}
+
+/* Animación de flujo */
+@keyframes flow {
+    0% {
+        background-position: top; /* Inicio */
+    }
+    100% {
+        background-position: bottom; /* Final */
+    }
+}
+
+
+/* Eventos */
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+    
+}
+
+/* Alternar posición izquierda/derecha */
+.timeline-event.left {
+    justify-content: flex-end; /* Alinea el contenido a la izquierda */
+}
+
+.timeline-event.right {
+    justify-content: flex-start; /* Alinea el contenido a la derecha */
+}
+
+/* Contenido de las tarjetas */
+.timeline-content {
+    background: linear-gradient(to bottom, #3dc5e7, #001f7f, #3dc5e7); /* Degradado */
+    background-size: 100% 300%; /* Tamaño del fondo más grande para el movimiento */
+    background-position: top; /* Inicia desde la parte superior */
+    animation: flow 3s infinite linear; /* Animación de flujo */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Alinea el texto a la izquierda */
+    position: relative;
+}
+
+/* Imágenes */
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .timeline:before {
+        left: 20px; /* Ajusta la línea para móviles */
+    }
+
+    .timeline-event {
+        flex-direction: column; /* Alinea las tarjetas en una columna */
+        align-items: center;
+    }
+
+    .timeline-content {
+        width: 90%; /* Reduce el ancho en dispositivos pequeños */
+        text-align: center; /* Centra el texto */
+    }
+}
