@@ -6,3 +6,15 @@
     min-height: 100vh;
     min-width: 220px;
 }
+
+.hotels{
+    display: flex;
+
+    flex-direction: row;
+    padding-top: 30px;
+}
+.hotel-description{
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 60px;
+}

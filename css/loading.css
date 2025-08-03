@@ -1,3 +1,9 @@
+:root{
+    --green: rgb(50, 140, 45);
+    --pink: rgb(255, 131, 164);
+    --orange: rgb(255, 175, 76);
+}
+
 /* Pantalla de carga */
 #loading-screen {
     position: fixed;
@@ -5,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 6, 121, 1) 0%, rgba(0, 0, 50, 1) 100%); /* Degradado */
+    background: white; /* Degradado */
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
@@ -18,7 +24,7 @@
 #logo {
     filter: blur(10px); /* Aplica el desenfoque */
     animation: fadeInLogo 2s ease-out forwards; /* Animación para mostrar el logo */
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 350px; /* Ajusta el tamaño del logo */
     height: auto; /* Mantiene la proporción del logo */
 }
 

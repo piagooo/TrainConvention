@@ -6,6 +6,11 @@
     list-style: none;
     font-family: "ubuntu";
 }
+:root{
+    --green: rgb(6, 121, 0);
+    --pink: rgb(255, 131, 164);
+    --orange: rgb(255, 175, 76);
+}
 @font-face{
 	font-family: nunito;
 	src: url("../fonts/nunito/nunito-regular.ttf") format("truetype");
@@ -23,18 +28,20 @@
 
 
 .logo img {
-    width: 75px;
-    height: 75px;
-    padding: 5px;
-    
+    width: 70px;
+    height: 70px;
+    padding: 5px;     
 }
+
 header {
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    background-color: rgba(0, 0, 0, 0.9);
+    /*background-color: rgba(0, 0, 0, 0.9);*/
+    background-color: rgba(242, 150, 38, 0.9);
+    overflow: visible;
 }
 header .header-left {
     display: flex;
@@ -91,20 +98,19 @@ header .header-right .hamburger div {
     background: #fff;
 }
 .snactiv{
-    color: #fff;
+    color: #000000;
     font-family: nunito;
   }
   .active{
-    color: #394CAA;
+    color: var(--green);
    font-family: ubuntu;
    font-size: 18px;
-
   }
   .active:hover{
     color: #fff;
   }
   .snactiv:hover{
-    color: #394CAA;
+    color: var(--green);
   }
 @media only screen and (max-width: 1000px) {
     header {
@@ -148,7 +154,7 @@ header .header-right .hamburger div {
 /*video */
 .video-fullwidth {
   width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
 }
 .description{
@@ -167,12 +173,11 @@ header .header-right .hamburger div {
     font-size: 40px;
     font-family: nunito;
     font-weight: bold;
-    color:rgb(0,6,121);
+    color:var(--pink);
     justify-content: center;
     margin-top: 10px;
     text-align: center;
     margin-bottom: 50px;
-
 }
 .description p{
   text-align: left;
@@ -180,14 +185,19 @@ header .header-right .hamburger div {
     color: #1d1d1d;
     font-family: nunito;
 }
+.description h3{
+    color: var(--orange);
+}
+.description h2{
+    color: var(--green);
+}
 
 
 
 /*footer*/
 footer{
     width: 100%;
-    background: rgb(0,6,121);
-    background: linear-gradient(180deg, rgba(0,6,121,1) 0%, rgba(1,4,64,1) 47%, rgba(1,4,65,1) 100%);
+    background: var(--orange);
     height: auto;
     justify-content: center;
     margin: 0 auto;
@@ -199,13 +209,13 @@ footer h1
     padding-top: 10px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
+    color: #000000;
     font-family:nunito;
 }
 footer p{
     text-align: center;
     font-size: 16px;
-    color: #fff;
+    color: #000000;
     font-family: nunito;
 }
 .redes{
@@ -246,20 +256,25 @@ footer p{
 }
 */
 
-/* The Modal (background) */
+/* The Modal (background)
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; /* Hidden by default 
+    position: fixed; /* Stay in place 
+    z-index: 1; /* Sit on top 
+    padding-top: 100px; /* Location of the box 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%; /* Full width 
+    height: 100%; /* Full height 
+    overflow: auto; /* Enable scroll if needed 
+    background-color: rgb(0,0,0); /* Fallback color 
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity
 }
+*/
+
+
+
 
 .close {
     position: absolute;
@@ -269,6 +284,7 @@ footer p{
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 9999999;
 }
   
 .close:hover, .close:focus {

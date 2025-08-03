@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+:root{
+  --green: rgb(50, 140, 45);
+  --pink: rgb(255, 131, 164);
+  --orange: rgb(255, 175, 76);
+}
+
 button {
   background: transparent;
   border: none;
@@ -97,10 +103,10 @@ h2{
   font-size: 1rem;
   white-space: normal;
   color: white;
-  background: rgb(0,6,121);
+  background: var(--pink);
   border-radius: 10px;
   border-style: solid;
-  border-color: rgb(0,6,121);
+  border-color: var(--pink);
   border-width: 2px;
 }
 
@@ -117,14 +123,25 @@ h2{
 .timeline ol li:nth-child(odd) div {
   top: -20px;
   transform: translateY(-100%);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.timeline ol li:nth-child(3n) div {
+  background: var(--green);
+  border-color: var(--green);
 }
 
 .timeline ol li:nth-child(odd) div::before {
   top: 100%;
   left: 2px;
   border-width: 15px 20px 0 0;
-  border-color: rgb(0,6,121) transparent transparent transparent;
+  border-color: var(--orange) transparent transparent transparent;
 }
+
+
+
+
 
 .timeline ol li:nth-child(even) div {
   top: calc(100% + 16px);
@@ -133,9 +150,13 @@ h2{
 .timeline ol li:nth-child(even) div::before {
   top: -9px;
   border-width: 15px 0 0 35px;
-  border-color: transparent transparent transparent rgb(0,6,121);
+  border-color: transparent transparent transparent var(--pink);
 }
 
+.timeline ol li:nth-child(3n) div::before {
+  border-width: 15px 20px 0 0;
+  border-color: var(--green) transparent transparent transparent;
+}
 .timeline time {
   display: block;
   font-size: 1.2rem;
@@ -172,6 +193,26 @@ h2{
     width: 100%;
 }
 
+.header{
+  height: 600px;
+  width: 100%;
+}
+.header div{
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  z-index: 8;
+  opacity: 0.4;
+}
+.header img{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

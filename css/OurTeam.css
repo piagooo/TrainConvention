@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --green: rgb(50, 140, 45);
+  --pink: rgb(255, 131, 164);
+  --orange: rgb(255, 175, 76);
+}
 
 button {
   background: transparent;
@@ -97,10 +102,10 @@ h2{
   font-size: 1rem;
   white-space: normal;
   color: white;
-  background: rgb(0,6,121);
+  background: var(--green);
   border-radius: 10px;
   border-style: solid;
-  border-color: rgb(0,6,121);
+  border-color: var(--green);
   border-width: 2px;
 }
 

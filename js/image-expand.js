@@ -1,12 +1,22 @@
 
 
 function expandImage(){
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("myModal").style.display = "flex";
 }
 
-// When the user clicks on <span> (x), close the modal
-var span = document.getElementsByClassName("close")[0];
+
 function closeImage() { 
     document.getElementById("myModal").style.display = "none";
 }
 
+//Switches main picture when you click on icons in carousel
+function switchImage(imgID, biggerPicture){
+    const bigPicture = document.getElementById(biggerPicture);
+    const smallpic = document.getElementById(imgID).src;
+    bigPicture.src = smallpic;
+}
+
+function everything(imgID,biggerPicture){
+    expandImage();
+    switchImage(imgID, biggerPicture);
+}
