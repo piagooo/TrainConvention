@@ -107,11 +107,21 @@
             font-size: 16px;
             margin-left: 5px; /* Espacio entre texto e ícono */
         }
+        .group-pic{
+            height: 15%;
+            width: 30%;
+            display: block;
+            margin: auto;
+        }
 
         /* Responsividad */
         @media (max-width: 768px) {
             .card-our {
                 width: calc(50% - 20px); /* 2 columnas en pantallas medianas */
+            }
+            .group-pic{
+                width:75vw;
+                height: 15%;
             }
         }
 
@@ -121,11 +131,7 @@
             }
         }
 
-        @media (min-width: 769px){
-            footer{
-                position: absolute; bottom: 0;
-            }    
-        }
+    
     </style>
     
 
@@ -166,47 +172,52 @@
      <h2 style="text-align:center;">Nuestro Equipo</h2>
 
      <div class="container-our">
-         <div class="card-our">
-             <div class="profile-image">
-                 <img src="../Fotos/pfp.png" alt="DEFAULT PHOTO">
-             </div>
-             <div class="info">
-                 <h3>Juan Cabuto</h3>
-                 <p>Organizadora Principal</p>
-                 <a href="#" target="_blank">
-                    Descubra más <span>&#10140;</span>
-                 </a>
-             </div>
-         </div>
-         <div class="card-our">
-             <div class="profile-image">
-                 <img src="../Fotos/pfp.png" alt="default photo">
-             </div>
-             <div class="info">
-                 <h3>Bo Golson</h3>
-                 <p>Divulgación Pública</p>
-                 <a href="#" target="_blank">
-                    Descubra más <span>&#10140;</span>
-                 </a>
-             </div>
-         </div>
-         <div class="card-our">
-             <div class="profile-image">
-                 <img src="../Fotos/pfp.png" alt="default photo">
-             </div>
-             <div class="info">
-                 <h3>Jonathan Rodriguez</h3>
-                 <p>Jefe de Tecnología</p>
-                 <a href="#" target="_blank">
-                    Descubra más <span>&#10140;</span>
-                 </a>
-             </div>
-         </div>
- 
-       
-         <h3>¡Para actualizaciones siga nuestra página de Facebook!</h3>
-   
- 
+        <div class="card-our">
+            <div class="profile-image">
+                <img src="../Fotos/pfp.png" alt="DEFAULT PHOTO">
+            </div>
+            <div class="info">
+                <h3>Juan Cabuto</h3>
+                <p>Head Organizer</p>
+            </div>
+        </div>
+        <!--
+             <div class="card-our">
+                   <div class="profile-image">
+                       <img src="Fotos/pfp.png" alt="default photo">
+                   </div>
+                   <div class="info">
+                       <h3>Bo Golson</h3>
+                       <p>Public Outreach</p>
+                       <a href="#" target="_blank">
+                           Find out more <span>&#10140;</span>
+                       </a>
+                   </div>
+           </div>
+           <div class="card-our">
+               <div class="profile-image">
+                   <img src="Fotos/pfp.png" alt="default photo">
+               </div>
+               <div class="info">
+                   <h3>Jonathan Rodriguez</h3>
+                   <p>Head of Technology</p>
+                   <a href="#" target="_blank">
+                       Find out more <span>&#10140;</span>
+                   </a>
+               </div>
+           </div>
+        -->
+        <p style="text-align: center;">
+            La Convención de Hermosillo 2026 contará con un equipo sólido de ex trabajadores ferroviarios, historiadores, diseñadores gráficos y voluntarios de apoyo. Todos los participantes tienen una pasión por la historia y los ferrocarriles que hará de esta una gran convención.
+            <br>
+            <br>
+           ¡Para actualizaciones, por favor siga nuestra página de facebook!
+           
+       </p>
+
+        
+        
+        <img class="group-pic" src="../Fotos/contact-img.jpg" alt="group photo">
          
         
          <!-- Repite más tarjetas -->

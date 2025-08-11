@@ -7,7 +7,7 @@
     <title>Hermosillo 2026</title>
     <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/service.css">
-   <link rel="icon" href="images/favicon.png" type="image/png">
+   <link rel="icon" href="Fotos/Logo/expo.svg" type="image/png">
    <script src="js/image-expand.js"></script>
 
   
@@ -19,7 +19,7 @@
             <div class="logo">
               <img src="Fotos/Logo/expo.svg" alt="Logo">
             </div>
-            <nav>
+            <nav class="menu">
                 <ul>
                   <li><a href="index.html" class="snactiv">HOME</a> </li>
                   <li><a href="history.html" class="snactiv">HISTORY OF SONORA</a> </li>
@@ -28,16 +28,15 @@
                   <li><a href="contact.html" class="snactiv">CONTACT</a></li>
                     
                 </ul>
-
             </nav>
         </div>
         <div class="header-right">
-
             <div class="hamburger">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+            
         </div>
     </header>
     <script>
@@ -50,11 +49,12 @@
 
     <div class="modal" id="myModal">
       <div class="modal-image">
+        <span class="close span2" onclick="closeImage()">&times;</span>
         <img src="Fotos/Tourism/20250627_125834.jpg" id="picture1">
       </div>
 
       <div class="modal-text">  
-        <span class="close" onclick="closeImage()">&times;</span>
+        <span class="close span1" onclick="closeImage()">&times;</span>
         <h3>Content Description etc. etc. </h3>
         <br>
           <p>
@@ -70,6 +70,7 @@
     <div class="header">
       <img src="Fotos/Tourism/san-carlos-4175388_1280.jpg">
     </div>
+
  
   
     <div class="tourism-cards">
@@ -149,6 +150,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 tarjetas.forEach(tarjeta => {
   observer.observe(tarjeta);
 });
+
  </script>
 
   

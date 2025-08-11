@@ -107,11 +107,21 @@
             font-size: 16px;
             margin-left: 5px; /* Espacio entre texto e ícono */
         }
+        .group-pic{
+            height: 15%;
+            width: 30%;
+            display: block;
+            margin: auto;
+        }
 
         /* Responsividad */
         @media (max-width: 768px) {
             .card-our {
                 width: calc(50% - 20px); /* 2 columnas en pantallas medianas */
+            }
+            .group-pic{
+                width:75vw;
+                height: 15%;
             }
         }
 
@@ -121,11 +131,7 @@
             }
         }
 
-        @media (min-width: 769px){
-            footer{
-                position: absolute; bottom: 0;
-            }    
-        }
+    
     </style>
     
 
@@ -173,40 +179,44 @@
              <div class="info">
                  <h3>Juan Cabuto</h3>
                  <p>Head Organizer</p>
-                 <a href="#" target="_blank">
-                     Find out more <span>&#10140;</span>
-                 </a>
              </div>
          </div>
-         <div class="card-our">
-             <div class="profile-image">
-                 <img src="Fotos/pfp.png" alt="default photo">
-             </div>
-             <div class="info">
-                 <h3>Bo Golson</h3>
-                 <p>Public Outreach</p>
-                 <a href="#" target="_blank">
-                     Find out more <span>&#10140;</span>
-                 </a>
-             </div>
-         </div>
-         <div class="card-our">
-             <div class="profile-image">
-                 <img src="Fotos/pfp.png" alt="default photo">
-             </div>
-             <div class="info">
-                 <h3>Jonathan Rodriguez</h3>
-                 <p>Head of Technology</p>
-                 <a href="#" target="_blank">
-                     Find out more <span>&#10140;</span>
-                 </a>
-             </div>
-         </div>
- 
-       
-         <h3>For updates please follow our Facebook page!</h3>
-   
- 
+         <!--
+              <div class="card-our">
+                    <div class="profile-image">
+                        <img src="Fotos/pfp.png" alt="default photo">
+                    </div>
+                    <div class="info">
+                        <h3>Bo Golson</h3>
+                        <p>Public Outreach</p>
+                        <a href="#" target="_blank">
+                            Find out more <span>&#10140;</span>
+                        </a>
+                    </div>
+            </div>
+            <div class="card-our">
+                <div class="profile-image">
+                    <img src="Fotos/pfp.png" alt="default photo">
+                </div>
+                <div class="info">
+                    <h3>Jonathan Rodriguez</h3>
+                    <p>Head of Technology</p>
+                    <a href="#" target="_blank">
+                        Find out more <span>&#10140;</span>
+                    </a>
+                </div>
+            </div>
+         -->
+         <p style="text-align: center;">
+            The 2026 Convention of Hermosillo will have a robust team of former railroad workers, historians, graphic designers, and supporting volunteers. Everyone participating has a passion for history and railroads that will make this a great convention.
+            <br>
+            <br>
+            For updates, please follow our facebook page! 
+        </p>
+
+         
+         
+         <img class="group-pic" src="Fotos/contact-img.jpg" alt="group photo">
          
         
          <!-- Repite más tarjetas -->
