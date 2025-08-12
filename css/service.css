@@ -24,6 +24,31 @@ header{
   position: fixed; top: 0;
   z-index: 1;
 }
+.description{
+  width: 25vw;
+  height: 350px;
+  position: fixed;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+   top: 100px; right: 60px;
+  h1{
+    
+    color: white;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  p{
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+  }
+}
+
+
+
+
 .tourism-cards{
   position: relative;
   z-index: 3;
@@ -141,7 +166,11 @@ footer{
 }
 
 
-@media only screen and (max-width: 760px){
+.description-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1000px){
   .header img{
     position: relative;
     z-index: 10;
@@ -168,10 +197,13 @@ footer{
     }
   }
 
+  .description{
+    display: none;
+  }
   
   .tourism-cards{
-    margin-top: 0;
     padding-top: 0;
+    margin-top: 100px;
     h1{
       margin-top: 0;
     }
@@ -251,5 +283,19 @@ footer{
     height: 80%;
     margin-left: 20px;
     margin-top: 25px;
+  }
+
+  .description-mobile{
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 70px;
+    text-align: center;
+    p{
+      text-align: center;
+    }
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
