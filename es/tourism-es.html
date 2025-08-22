@@ -26,7 +26,7 @@
                   <li><a href="tourism-es.html" class="active">TURISMO</a></li>
                   <li><a href="links-es.html" class="snactiv">LINKS</a></li>
                   <li><a href="contact-es.html" class="snactiv">CONTACTA CON NOSOTROS</a></li>
-                    
+                  <li><a href="../index.html" class="snactiv">ENGLISH</a></li>  
                 </ul>
 
             </nav>
@@ -48,14 +48,16 @@
         }
     </script>
 
-    <div class="modal" id="myModal">
-      <div class="modal-image">
-        <img src="../Fotos/Tourism/20250627_125834.jpg" id="picture1">
-      </div>
+<div class="modal" id="myModal">
+  <div class="modal-image">
+    <span class="close span2" onclick="closeImage()">&times;</span>
+    <img src="../Fotos/Tourism/20250627_125834.jpg" id="picture1">
+  </div>
 
-      <div class="modal-text">  
-        <span class="close" onclick="closeImage()">&times;</span>
-        <h3>Descripción del contenido etc. etc. </h3>
+  <div class="modal-text">  
+    <span class="close span1" onclick="closeImage()">&times;</span>
+    <div id="modal-text">
+      <h3>Content Description etc. etc. </h3>
         <br>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -63,19 +65,21 @@
             <br>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-      </div>
-      
     </div>
+
+  </div>
+  
+</div>
 
     <div class="header">
       <div class="description">
-        <h1>Activities</h1>
+        <h1>Actividades</h1>
         <br>
-        <p>Sonora is filled with rich many activities, Hermosillo is the Capital and loaded with stuff to do if you want to explore the city </p>
+        <p>Sonora está lleno de ricas actividades, Hermosillo es la capital y está repleta de cosas que hacer si quieres explorar la ciudad.</p>
         <p>
           <br>
           <br>
-          Image: The Beach of San Carlos, Sonora
+          Imagen: La Playa de San Carlos, Sonora
         </p>
       </div>
       <img src="../Fotos/Tourism/san-carlos-4175388_1280.jpg">
@@ -83,66 +87,114 @@
  
     
     <div class="description-mobile">
-      <h1>Activities</h1>
+      <h1>Actividades</h1>
       <br>
-      <p>Sonora is filled with rich many activities, Hermosillo is the Capital and loaded with stuff to do if you want to explore the city </p>
+      <p>Sonora está lleno de ricas actividades, Hermosillo es la capital y está repleta de cosas que hacer si quieres explorar la ciudad.</p>
       <p>
         <br>
         <br>
-        Image Above: The Beach of San Carlos, Sonora
+        Imagen: La Playa de San Carlos, Sonora
       </p>
     </div>
   
+    
   
     <div class="tourism-cards">
-      <h1>Lugares de Interés</h1>
+      <h1>Places of Interest</h1>
       <div class="space">
-        <div class="location" onclick="everything('imagen1','picture1');">
+        <div class="location" onclick="everything('imagen1','picture1', 'text-change1');">
           <div class="images">
             <div class="text">
-              <h2>Museo de Culturas Populares de Sonora</h2>
+              <h2>Museum of Popular Cultures of Sonora</h2>
             </div>
             <img src="../Fotos/Tourism/unnamed.jpg" id="imagen1">
+            <div class="text-change" id="text-change1">
+              <h1>Museo de Culturas Populares e Indígenas de Sonora</h1>
+              <p>
+                <br>
+                Ubicado en el centro histórico, el Museo de Culturas Populares e Indígenas de Sonora es un museo que ofrece exposiciones sobre las culturas indígenas de Sonora. El edificio data de finales de 1800.                <br>
+                <br>
+                Dirección: Dr Hoeffer 22, El Centenario, 83260 Hermosillo, Son., Mexico
+              </p>
+            </div>
           </div>
         </div>
     
-        <div class="location" onclick="everything('imagen2','picture1');">
+        <div class="location" onclick="everything('imagen2','picture1', 'text-change2');">
           <div class="images">
             <div class="text">
               <h2>Museo Regional de Sonora</h2>
             </div>
             <img src="../Fotos/Tourism/Escudo_de_Hermosillo.svg.png" id="imagen2">
+            <div class="text-change" id="text-change2">
+              <h1>Museo Regional de Sonora</h1>
+              <p>
+                <br>
+                Establecido en 1985 y originalmente la penitenciaría de la ciudad construida en 1908, el museo ofrece 18 salas de exposición y cinco exposiciones temporales para promover la historia y la cultura de Sonora.                <br>
+                <br>
+                Dirección: Jesús García Final s/n, C. California 35, La Matanza, 83080 Hermosillo, Son., Mexico
+              </p>
+            </div>
           </div>
         </div>
     
-        <div class="location" onclick="everything('imagen3','picture1');">
+        <div class="location" onclick="everything('imagen3','picture1', 'text-change3');">
           <div class="images">
             <div class="text">
-              <h2>Museo de Minería de Hermosillo Porfirio Padilla</h2>
+              <h2>Musas Museo de arte de Sonora</h2>
             </div>
-            <img src="../Fotos/Tourism/quarry-6655939_1280.jpg" id="imagen3">
+            <img src="../Fotos/Tourism/Museo-de-Arte-Sonora.png" id="imagen3">
+            <div class="text-change" id="text-change3">
+              <h1>Musas Museo de arte de Sonora</h1>
+              <p>
+                <br>
+                Ubicado al sur del centro, el Museo de Arte de Sonora fue fundado en 2009 y cuenta con colecciones de artistas mexicanos e internacionales. Abierto de martes a domingo de 10:00 a.m. a 5:00 p.m.                <br>
+                <br>
+                Dirección: Centro Cultural Musas, Blvd. Agustín de Vildósola S/N, Proyecto Rio Sonora Hermosillo XXI, 83270 Hermosillo, Son., Mexico
+              </p>
+            </div>
           </div>
         </div>
     
-        <div class="location" onclick="everything('imagen4','picture1');">
+        <div class="location" onclick="everything('imagen4','picture1', 'text-change4');">
           <div class="images">
             <div class="text">
               <h2>Cerro de la Campana</h2>
             </div>
             <img src="../Fotos/Tourism/hill-of-the-bell-7314174_1280.jpg" id="imagen4">
+            <div class="text-change" id="text-change4">
+              <h1>La Campana</h1>
+              <p>
+                <br>
+                La Campana es una colina notable en Hermosillo. Se puede conducir hasta la cima utilizando la calle Cucurpe. Una vez en la cima, los visitantes pueden aparcar y caminar hasta una plataforma de observación para ver las increíbles vistas panorámicas. Las piedras de la colina también son conocidas por producir un sonido similar al de una campana.                <br>
+                <br>
+                Altura: 319m or 1048 ft
+              </p>
+            </div>
           </div>
         </div>
     
-        <div class="location" onclick="everything('imagen5','picture1');">
+        <div class="location" onclick="everything('imagen5','picture1','text-change5');">
           <div class="images">
             <div class="text">
               <h2>Catedral de la Asunción</h2>
             </div>
             <img src="../Fotos/Tourism/20250627_125834.jpg" id="imagen5">
+            <div class="text-change" id="text-change5">
+              <h1>Metropolitan Cathedral of Asunción</h1>
+              <p>
+                <br>
+                Ubicada en la plaza del Centro Histórico y con una altura de 30 metros, la construcción de la Catedral de Asunción comenzó en 1877 y se completó en 1908, sin embargo, una de las cúpulas no se terminó hasta 1963. La arquitectura de la Catedral presenta estilos Barroco, Neoclásico y Neo-Gótico. Cerca de la Catedral, los vendedores locales venden comida y souvenirs.                <br>
+                <br>
+                Dirección: Blvr. Miguel Hidalgo S/N, Centro Norte, 83000 Hermosillo, Son., Mexico
+              </p>
+            </div>
           </div>
         </div>
       </div>  
     </div>
+
+
 
 
 

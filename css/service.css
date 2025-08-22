@@ -79,11 +79,11 @@ header{
   height: 300px;
   border-radius: 15px;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   opacity: 0;
 }
 .text:hover{
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .text h2{
@@ -96,6 +96,7 @@ header{
 .location{
   display: inline-block;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 footer{
@@ -169,6 +170,12 @@ footer{
 .description-mobile{
   display: none;
 }
+.text-change{
+  display: none;
+}
+h1{
+  color: white;
+}
 
 @media only screen and (max-width: 1000px){
   .header img{
@@ -186,11 +193,11 @@ footer{
   }
 
 
-
   .text{
     height: 100px;
-    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0.9);
     margin-top: 25%;
+    border-radius: 0;
     h2{
       margin-top: 0;
       padding-top: 15px;
@@ -245,14 +252,15 @@ footer{
   .modal{
     display: none;
     flex-direction: column;
-    z-index: 8;
-    position: absolute;
+    z-index: 99999;
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.9);
     width: 85%;
-    height: 180%;
-    margin-top: 55%;
+    height: 87%;
+    margin-top: 15%;
     margin-left: 7.5%;
     border-radius: 20px;
+    overflow: scroll;
     left: 0;
     top: 0;
     h3,p{
@@ -268,15 +276,17 @@ footer{
   }
   
   .modal-image{
-   display: block;
+    display: block;
   }
   
   .modal-text{
+    margin-top: 0;
     padding-top: 0;
     position: relative;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 100px;
   }
   .modal img{
     width: 90%;
@@ -293,6 +303,9 @@ footer{
     text-align: center;
     p{
       text-align: center;
+    }
+    h1{
+      color: black;
     }
     padding-top: 15px;
     padding-left: 25px;

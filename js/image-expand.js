@@ -16,7 +16,12 @@ function switchImage(imgID, biggerPicture){
     bigPicture.src = smallpic;
 }
 
-function everything(imgID,biggerPicture){
+function everything(imgID,biggerPicture, change){
     expandImage();
     switchImage(imgID, biggerPicture);
+    switchtext(change);
+}
+
+function switchtext(change){
+    document.getElementById('modal-text').innerHTML = document.getElementById(change).innerHTML;
 }
